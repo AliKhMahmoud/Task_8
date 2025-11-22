@@ -59,7 +59,7 @@
             -title: String, Required.
             -owner: ObjectId (Reference: User).
             -members: [ObjectId] (Reference: User), the list of team members.
-            -status: String (e.g., 'active', 'completed', 'archived').
+            -status: String ('active', 'completed', 'archived').
             -isArchived: Boolean, for managing archived state.
 
     3. Task Schema
@@ -68,7 +68,7 @@
             -assignedTo: ObjectId (Reference: User), Required
             -createdBy: ObjectId (Reference: User), Required
             -dueDate: Date.
-            -priority: String (e.g., 'low', 'high'), Required.
+            -priority: String ('low', 'high'), Required.
             -status: String ('todo', 'in progress', 'done').
 
     4. Notification Schema
@@ -248,7 +248,7 @@
     PUT /api/tasks/:taskId/status
         -Method: PUT
         -Description: Update the status of a specific task.
-        -Authentication: Required (Authorization checked: must be the assigned user or project owner)
+        -Authentication: Required 
 
         -Request Body:
             status (string: 'todo'/'in progress'/'done', required)
@@ -273,7 +273,7 @@
         -Authentication: Required
 
         -Query Parameters:
-            isRead (boolean, optional: filter by read status, e.g., ?isRead=false to get unread only)
+            isRead (boolean, optional: filter by read status)
 
         -Response Success (200):
         { 
@@ -310,7 +310,7 @@
             { 
             "success": true, 
             "message": "Notification marked as read", 
-            "data": { "id": "...", "isRead": true } 
+            "data": { "id": " ", "isRead": true } 
             }
 
         -Response Errors:
