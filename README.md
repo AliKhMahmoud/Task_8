@@ -1,12 +1,13 @@
 ### Project Structure:
 
+```text
 ├── node_modules
 ├── src
 │   ├── controllers/
 │   │   ├── auth.controller.js
 │   │   ├── project.controller.js
 │   │   ├── task.controller.js
-│   │   └── analytics.controller.js
+│   │   ├── analytics.controller.js
 │   │   └── notification.controller.js
 │   ├── middleware
 │   │   ├── auth.middleware.js             
@@ -19,7 +20,7 @@
 │   ├── routes
 │   │   ├── auth.routes.js
 │   │   ├── project.routes.js
-│   │   └── task.routes.js
+│   │   ├── task.routes.js
 │   │   └── notification.routes.js
 │   ├── utils                
 │   │   ├── tokenService.js            
@@ -34,15 +35,15 @@
 
 ### Required Libraries:
 
-1- npm init -y => create package.json
-2- npm i express  => Building servers on Node.js
-3- npm i nodemon  => Monitor for file changes and automatically restart the Node.js server
-4- npm i morgan => Logs incoming HTTP requests to the console
-5- npm i dotenv => Loads important environment variables from a ".env" file
-6- npm i mongoose => Makes working with the MongoDB database structured and safe
-7- npm i jsonWebToken => Verifying user identity on every request
-8- npm i cookie-parser => Handles reading (fetching) data stored in cookies from client requests
-9- npm i bcryptjs => Securely hashing passwords for database
+1.  **npm init -y** => create package.json
+2.  **npm i express** => Building servers on Node.js
+3.  **npm i nodemon** => Monitor for file changes and automatically restart the Node.js server
+4.  **npm i morgan** => Logs incoming HTTP requests to the console
+5.  **npm i dotenv** => Loads important environment variables from a ".env" file
+6.  **npm i mongoose** => Makes working with the MongoDB database structured and safe
+7.  **npm i jsonWebToken** => Verifying user identity on every request
+8.  **npm i cookie-parser** => Handles reading (fetching) data stored in cookies from client requests
+9.  **npm i bcryptjs** => Securely hashing passwords for database
 
 
 ### Database Models:
@@ -138,7 +139,7 @@
             Entering incorrect email or password.
             Submitting a request with missing fields.
 
-POST /api/auth/logout
+    POST /api/auth/logout
         -Method: POST
         -Description: Invalidates the current user session by clearing the Refresh Token cookie. Access Token will naturally expire.
         -Authentication: Required 
